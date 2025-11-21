@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>React Inside HTML</title>
+
+    <link rel="stylesheet" href="style.css" />
+
+    <script src="https://unpkg.com/react@18/umd/react.development.js"></script>
+    <script src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+    <script src="https://unpkg.com/babel-standalone@6/babel.min.js"></script>
+</head>
+
+<body>
+
+    <div id="root"></div>
+
+    <script type="text/babel">
+
+
+        function Footer() {
+            return (
+                <footer className="footer">
+                    <div className="footer-grid">
+
+                        <div>
+                            <h4>Discover Udemy</h4>
+                            <ul>
+                                <li>Get the app</li>
+                                <li>Teach on Udemy</li>
+                                <li>About us</li>
+                            </ul>
+                        </div>
+
+                        <div>
+                            <h4>Top Categories</h4>
+                            <ul>
+                                <li>Web Development</li>
+                                <li>AI & Data</li>
+                                <li>Business</li>
+                            </ul>
+                        </div>
+
+                        <div>
+                            <h4>Plans & Pricing</h4>
+                            <ul>
+                                <li>Individual</li>
+                                <li>Team</li>
+                                <li>Enterprise</li>
+                            </ul>
+                        </div>
+
+                        <div>
+                            <h4>AI Fluency</h4>
+                            <ul>
+                                <li>AI Essentials</li>
+                                <li>Prompt Engineering</li>
+                                <li>AI Career Path</li>
+                                <li>GenAI Tools</li>
+                            </ul>
+                        </div>
+
+                    </div>
+
+                    <p className="copy">© 2025 Learning Demo</p>
+                </footer>
+            );
+        }
+
+
+        function CareerSection() {
+            return (
+                <section className="career-section">
+
+                    <div className="career-left">
+                        <h2>Reimagine your career in the AI era</h2>
+                        <p>
+                            Future-proof your skills with Personal Plan. Get access to a variety
+                            of fresh content from real-world experts.
+                        </p>
+
+                        <ul className="career-list">
+                            <li>⭐ Learn AI and more</li>
+                            <li>🏆 Prep for a certification</li>
+                            <li>🎧 Practice with AI coaching</li>
+                            <li>💡 Advance your career</li>
+                        </ul>
+
+                        <button className="btn primary">Learn more</button>
+                        <p className="career-price">Starting at £204.00/month</p>
+                    </div>
+
+                    <div className="career-right">
+                        <img src="ai-career@2x.webp" className="career-img big" />
+                    </div>
+
+                </section>
+            );
+        }
+
+        
+        function App() {
+            return (
+                <div className="page">
+
+                    <header className="navbar">
+                        <h1 className="logo">Udemy</h1>
+                        <input className="search" placeholder="Search for anything" />
+                        <div className="nav-buttons">
+                            <button className="btn ghost">Log in</button>
+                            <button className="btn primary">Sign up</button>
+                        </div>
+                    </header>
+
+                    <section className="hero"
+                        style={{ backgroundImage: "url('5ab81bd5-af55-4235-9f1e-07cdc7ce0b93.jpg')" }}>
+                        <div className="hero-content">
+                            <h2>Learn more, spend less — Black Friday Sale</h2>
+                            <p>Massive savings on courses until Nov 28.</p>
+                            <button className="btn primary">Explore Courses</button>
+                        </div>
+                    </section>
+
+                    <section className="courses">
+                        <h2>Skills to transform your career</h2>
+                        <div className="course-grid">
+
+                            <div className="course-card">
+                                <img src="prompt-engineering.webp" />
+                                <h3>AI Engineer Bootcamp</h3>
+                                <p>Python, DL, NLP, Transformers</p>
+                                <span className="price">£309.99</span>
+                            </div>
+
+                            <div className="course-card">
+                                <img src="generative-ai.webp" />
+                                <h3>Intro to AI Agents</h3>
+                                <p>Agents, planning, reasoning</p>
+                                <span className="price">£309.99</span>
+                            </div>
+
+                            <div className="course-card">
+                                <img src="machine-learning.webp" />
+                                <h3>AI for Business</h3>
+                                <p>Solve real-world problems with AI</p>
+                                <span className="price">£579.99</span>
+                            </div>
+
+                            <div className="course-card">
+                                <img src="data-science.webp" />
+                                <h3>Data Science & AI Masters</h3>
+                                <p>Python, ML, Deep Learning</p>
+                                <span className="price">£309.99</span>
+                            </div>
+
+                        </div>
+                    </section>
+
+                    
+                    <CareerSection />
+
+                    <Footer />
+
+                </div>
+            );
+        }
+
+        ReactDOM.createRoot(document.getElementById("root")).render(<App />);
+
+    </script>
+
+</body>
+
+</html>
